@@ -1,6 +1,7 @@
 package com.polovyi.ivan.tutorials.transformer;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.github.jknack.handlebars.internal.lang3.StringUtils;
 import com.github.tomakehurst.wiremock.client.ResponseDefinitionBuilder;
 import com.github.tomakehurst.wiremock.common.FileSource;
 import com.github.tomakehurst.wiremock.common.TextFile;
@@ -16,7 +17,6 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.SneakyThrows;
-import org.apache.commons.lang3.StringUtils;
 
 public class CreateCustomerTransformer extends ResponseDefinitionTransformer {
 

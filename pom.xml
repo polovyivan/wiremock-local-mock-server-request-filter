@@ -10,16 +10,16 @@
   <name>wiremock-local-mock-server-request-filter</name>
 
   <properties>
-    <maven.compiler.source>20</maven.compiler.source>
-    <maven.compiler.target>20</maven.compiler.target>
-    <java.version>20</java.version>
+    <maven.compiler.source>17</maven.compiler.source>
+    <maven.compiler.target>17</maven.compiler.target>
+    <java.version>17</java.version>
   </properties>
 
   <dependencies>
     <dependency>
-      <groupId>com.github.tomakehurst</groupId>
-      <artifactId>wiremock-jre8</artifactId>
-      <version>2.35.0</version>
+      <groupId>org.wiremock</groupId>
+      <artifactId>wiremock</artifactId>
+      <version>3.3.1</version>
     </dependency>
     <dependency>
       <groupId>org.wiremock</groupId>
