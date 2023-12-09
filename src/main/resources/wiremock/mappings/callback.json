@@ -1,0 +1,26 @@
+{
+  "request": {
+    "urlPath": "/order-callback",
+    "method": "POST"
+  },
+  "response": {
+    "status": 201
+  },
+  "postServeActions": [
+    {
+      "name": "webhook",
+      "parameters": {
+        "method": "POST",
+        "url": "http://localhost:8000/notifications",
+        "delay": {
+          "type": "fixed",
+          "milliseconds": 3000
+        },
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": "{ \"orderId\": \"1\", \"customerId\": \"{{jsonPath originalRequest.body '$.customerId'}}\" }"
+      }
+    }
+  ]
+}

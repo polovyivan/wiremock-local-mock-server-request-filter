@@ -1,0 +1,13 @@
+{
+  "request": {
+    "method": "POST",
+    "url": "/notifications"
+  },
+  "response": {
+    "status": 201,
+    "body": "{\"ACCEPTED\"}",
+    "headers": {
+      "Content-Type": "application/json"
+    }
+  }
+}

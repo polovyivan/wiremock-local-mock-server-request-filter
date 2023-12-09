@@ -1,0 +1,21 @@
+{
+  "request": {
+    "method": "GET",
+    "urlPathPattern": "/customers/([0-9]*)"
+  },
+  "response": {
+    "transformers": ["response-template"],
+    "status": 200,
+    "jsonBody": {
+      "id": "{{request.path.[1]}}",
+      "customerName": "Customer Name",
+      "paymentMethods": [
+        "VISA",
+        "MASTER"
+      ]
+    },
+    "headers": {
+      "Content-Type": "application/json"
+    }
+  }
+}

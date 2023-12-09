@@ -1,0 +1,12 @@
+{
+  "request": {
+    "method": "POST",
+    "urlPath": "/customers"
+  },
+  "response": {
+    "status": 201,
+    "transformers": [
+      "create-customer-transformer"
+    ]
+  }
+}
