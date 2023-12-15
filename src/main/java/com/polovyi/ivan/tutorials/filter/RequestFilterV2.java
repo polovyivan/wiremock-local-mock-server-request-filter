@@ -15,7 +15,7 @@ import lombok.extern.slf4j.Slf4j;
 
 
 @Slf4j
-public class GlobalRequestFilterV2 implements StubRequestFilterV2 {
+public class RequestFilterV2 implements StubRequestFilterV2 {
 
     private static final String INSTRUCTION_HEADER_NAME = "instruction_2";
     private static final String INSTRUCTION_HEADER_1 = "add-header";
@@ -25,12 +25,12 @@ public class GlobalRequestFilterV2 implements StubRequestFilterV2 {
 
     @Override
     public String getName() {
-        return "request-interceptor_2";
+        return "request-filter-2";
     }
 
     @Override
     public RequestFilterAction filter(Request request, ServeEvent serveEvent) {
-        log.info("Request is intercepted_2");
+        log.info("Request is in filter-2.");
         String instructionHeader = request.getHeader(INSTRUCTION_HEADER_NAME);
 
         if (request.containsHeader(INSTRUCTION_HEADER_NAME)) {

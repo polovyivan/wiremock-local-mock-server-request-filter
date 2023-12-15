@@ -10,7 +10,7 @@ import lombok.extern.slf4j.Slf4j;
 
 
 @Slf4j
-public class GlobalRequestFilterV1 implements StubRequestFilterV2 {
+public class RequestFilterV1 implements StubRequestFilterV2 {
 
     private static final String INSTRUCTION_HEADER_NAME = "instruction_1";
     private static final String INSTRUCTION_HEADER_1 = "throw-exception-400";
@@ -18,12 +18,12 @@ public class GlobalRequestFilterV1 implements StubRequestFilterV2 {
 
     @Override
     public String getName() {
-        return "request-interceptor_1";
+        return "request-filter-1";
     }
 
     @Override
     public RequestFilterAction filter(Request request, ServeEvent serveEvent) {
-        log.info("Request is intercepted_1.");
+        log.info("Request is in filter-1.");
 
         String instructionHeader = request.getHeader(INSTRUCTION_HEADER_NAME);
 
