@@ -72,7 +72,7 @@ public class CreateCustomerTransformer extends ResponseDefinitionTransformer {
     @Data
     @NoArgsConstructor
     @AllArgsConstructor
-    private static class CreateCustomerRequest {
+    public static class CreateCustomerRequest {
 
         private String customerName;
         private Set<String> paymentMethods;
